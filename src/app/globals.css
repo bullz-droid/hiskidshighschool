@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-green-deep: #143d2b;
+    --color-green-mid: #1c5236;
+    --color-maroon: #781d2c;
+    --color-maroon-dark: #54121d;
+    --color-beige: #f4ede2;
+    --color-beige-light: #fbf8f2;
+    --color-brown: #8c6d53;
+    --color-gold: #d4a338;
+    --color-ink: #181b17;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #fbf8f2;
+    color: #181b17;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Custom selection highlight */
+  ::selection {
+    background-color: #781d2c;
+    color: #fbf8f2;
+  }
+}
+
+/* Custom animated grass blades in hero */
+.blade {
+  transform-origin: bottom center;
+  animation: bladeSway 5.5s ease-in-out infinite;
+}
+.blade:nth-child(odd) {
+  animation-duration: 6.5s;
+}
+.blade:nth-child(3n) {
+  animation-delay: 0.6s;
+}
+.blade:nth-child(4n) {
+  animation-delay: 1.2s;
+}
+
+@keyframes bladeSway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blade {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
