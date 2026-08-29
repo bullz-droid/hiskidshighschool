@@ -18,20 +18,44 @@ export default function AboutPage() {
     <div className="w-full">
       {/* Page Header */}
       <section className="bg-brand-green-deep text-brand-beige-light py-16 sm:py-24 border-b border-brand-maroon/30 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex items-center gap-2 mb-3">
-            <span className="h-0.5 w-8 bg-brand-gold inline-block" />
-            <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-gold-light">
-              About His Kids High School
-            </span>
+        {/* Background photo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/classroom-uniforms.jpg"
+          alt="His Kids High School students in class"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-20"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep/95 via-brand-green-deep/80 to-brand-green-deep/60" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <div className="flex items-center gap-2 mb-3">
+              <span className="h-0.5 w-8 bg-brand-gold inline-block" />
+              <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-gold-light">
+                About His Kids High School
+              </span>
+            </div>
+            <h1 className="font-serif font-bold text-4xl sm:text-6xl text-brand-beige-light leading-tight">
+              Rooted in Soil, <br />
+              <span className="italic text-brand-gold">Aiming for the Sky</span>
+            </h1>
+            <p className="text-sm sm:text-base text-brand-beige-border/90 mt-4 max-w-2xl leading-relaxed">
+              Founded in Kayunga District to deliver academic brilliance, certified vocational crafts, and Christ-centered character development.
+            </p>
           </div>
-          <h1 className="font-serif font-bold text-4xl sm:text-6xl text-brand-beige-light leading-tight">
-            Rooted in Soil, <br />
-            <span className="italic text-brand-gold">Aiming for the Sky</span>
-          </h1>
-          <p className="text-sm sm:text-base text-brand-beige-border/90 mt-4 max-w-2xl leading-relaxed">
-            Founded in Kayunga District to deliver academic brilliance, certified vocational crafts, and Christ-centered character development.
-          </p>
+          {/* Classroom photo callout */}
+          <div className="hidden lg:block relative rounded-2xl overflow-hidden h-72 border border-brand-gold/30 shadow-elevated">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/classroom-hands.jpg"
+              alt="Students eagerly participating in class"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-green-deep/80 via-transparent to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4">
+              <div className="font-mono text-[11px] text-brand-gold uppercase tracking-wider">Every Lesson Counts</div>
+              <div className="text-xs text-brand-beige-border/90 mt-1">Hands up — the answer is always in the room</div>
+            </div>
+          </div>
         </div>
       </section>
 

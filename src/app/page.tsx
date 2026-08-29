@@ -62,19 +62,46 @@ export default function HomePage() {
             </div>
 
             <div className="hidden lg:flex lg:col-span-4 justify-center items-center">
-              <div className="relative p-8 rounded-3xl bg-brand-green-dark/80 border border-brand-maroon/40 shadow-2xl backdrop-blur-sm text-center">
-                <div className="w-36 h-36 mx-auto mb-4 drop-shadow-xl">
-                  <Crest className="w-full h-full" />
-                </div>
-                <div className="font-serif font-bold text-lg text-brand-beige-light">
-                  Motto &amp; Vision
-                </div>
-                <div className="font-mono text-xs text-brand-gold-light italic mt-1">
-                  &ldquo;Nurturing Minds, Skilled Hands, Servant Hearts&rdquo;
-                </div>
-                <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-center gap-2 text-[11px] font-mono text-brand-beige-border">
-                  <ShieldCheck className="w-4 h-4 text-brand-gold" />
-                  <span>Govt &amp; UNEB Accredited Center</span>
+              <div className="relative w-full">
+                <div className="grid grid-cols-2 gap-3">
+                  <div className="relative rounded-2xl overflow-hidden h-64 shadow-elevated border border-brand-maroon/30">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src="/images/smiling-student.jpg"
+                      alt="A joyful His Kids High School student holding textbooks"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-green-deep/80 via-transparent to-transparent" />
+                    <div className="absolute bottom-3 left-3 right-3">
+                      <span className="font-mono text-[10px] text-brand-gold uppercase tracking-wider">Ready to Learn</span>
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-3">
+                    <div className="relative rounded-2xl overflow-hidden h-36 shadow-elevated border border-brand-gold/20">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
+                        src="/images/classroom-hands.jpg"
+                        alt="Students raising hands eagerly in class"
+                        className="absolute inset-0 w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/70 via-transparent to-transparent" />
+                      <div className="absolute bottom-2 left-2 right-2">
+                        <span className="font-mono text-[10px] text-brand-gold-light uppercase tracking-wider">Active Classrooms</span>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-brand-green-dark/90 border border-brand-maroon/40 text-center shadow-card flex-1">
+                      <div className="w-12 h-12 mx-auto mb-2 drop-shadow-lg">
+                        <Crest className="w-full h-full" />
+                      </div>
+                      <div className="font-mono text-[10px] text-brand-gold-light italic leading-snug">
+                        &ldquo;Minds, Hands &amp; Hearts&rdquo;
+                      </div>
+                      <div className="flex items-center justify-center gap-1.5 mt-2 text-[10px] font-mono text-brand-beige-border">
+                        <ShieldCheck className="w-3 h-3 text-brand-gold" />
+                        <span>UNEB Accredited</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -138,6 +165,20 @@ export default function HomePage() {
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
                 Alongside regular academic lessons, every learner masters a certified tertiary hand trade — tailoring, timber carpentry, or modern agribusiness — and competes in school sport weekly.
               </p>
+
+              {/* Student writing image */}
+              <div className="relative rounded-2xl overflow-hidden h-48 shadow-card border border-brand-beige-border mt-2">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/student-writing.jpg"
+                  alt="A dedicated student studying and writing notes"
+                  className="absolute inset-0 w-full h-full object-cover object-top"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep/60 via-transparent to-transparent" />
+                <div className="absolute bottom-3 left-4">
+                  <span className="font-mono text-[10px] text-brand-beige-light uppercase tracking-wider bg-brand-green-deep/80 px-2 py-1 rounded-full">Focused. Determined. Excellent.</span>
+                </div>
+              </div>
 
               <div className="pt-2">
                 <Link
@@ -458,6 +499,40 @@ export default function HomePage() {
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* PHOTO GALLERY STRIP */}
+      <section className="py-12 bg-brand-green-deep overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 text-center">
+          <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-gold-light">Life at His Kids High School</span>
+          <h2 className="font-serif font-bold text-2xl sm:text-3xl text-brand-beige-light mt-1">Real students. Real learning. Real community.</h2>
+        </div>
+        <div className="flex gap-3 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto overflow-x-auto pb-2 scrollbar-hide">
+          {[
+            { src: "/images/smiling-student.jpg", label: "Joy of Learning", sub: "Students arrive eager every morning" },
+            { src: "/images/classroom-hands.jpg", label: "Engaged Classrooms", sub: "Curiosity drives every lesson" },
+            { src: "/images/student-writing.jpg", label: "Academic Excellence", sub: "Serious focus, serious results" },
+            { src: "/images/classroom-uniforms.jpg", label: "Smart Uniform Pride", sub: "Identity, discipline & belonging" },
+            { src: "/images/football-match.jpg", label: "Sports & Athletics", sub: "Champions on the pitch too" },
+          ].map(({ src, label, sub }) => (
+            <div
+              key={label}
+              className="relative flex-shrink-0 w-64 sm:w-72 rounded-2xl overflow-hidden border border-brand-maroon/30 shadow-card group"
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={src}
+                alt={label}
+                className="w-full h-52 object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-green-deep/90 via-brand-green-deep/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4">
+                <div className="font-mono text-[10px] text-brand-gold uppercase tracking-wider">{label}</div>
+                <div className="text-xs text-brand-beige-border/90 mt-0.5">{sub}</div>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

@@ -15,8 +15,16 @@ export default function StudentLifePage() {
   return (
     <div className="w-full">
       {/* Header */}
-      <section className="bg-brand-green-deep text-brand-beige-light py-16 sm:py-24 border-b border-brand-maroon/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="bg-brand-green-deep text-brand-beige-light py-16 sm:py-24 border-b border-brand-maroon/30 relative overflow-hidden">
+        {/* Background photo */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/football-match.jpg"
+          alt="Students playing football at His Kids High School"
+          className="absolute inset-0 w-full h-full object-cover object-center opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep via-brand-green-deep/85 to-brand-green-deep/50" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center gap-2 mb-3">
             <span className="h-0.5 w-8 bg-brand-gold inline-block" />
             <span className="font-mono text-xs font-bold uppercase tracking-widest text-brand-gold-light">
@@ -118,14 +126,28 @@ export default function StudentLifePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="p-6 bg-white rounded-2xl border border-brand-beige-border shadow-subtle space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-brand-maroon/10 text-brand-maroon flex items-center justify-center font-bold">
-                <Trophy className="w-5 h-5" />
+            <div className="rounded-2xl border border-brand-beige-border shadow-subtle overflow-hidden">
+              {/* Football photo */}
+              <div className="relative h-48">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/football-match.jpg"
+                  alt="His Kids High School students competing in a football match"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-green-deep/80 via-transparent to-transparent" />
+                <div className="absolute top-3 left-3">
+                  <div className="w-8 h-8 rounded-lg bg-brand-maroon/90 text-brand-gold flex items-center justify-center">
+                    <Trophy className="w-4 h-4" />
+                  </div>
+                </div>
               </div>
-              <h3 className="font-serif font-bold text-lg text-brand-ink">Competitive Sports</h3>
-              <p className="text-xs text-brand-ink-muted leading-relaxed">
-                Football teams (boys &amp; girls), netball league, volleyball, athletics sprint squads, table tennis, and basketball.
-              </p>
+              <div className="p-5 bg-white space-y-2">
+                <h3 className="font-serif font-bold text-lg text-brand-ink">Competitive Sports</h3>
+                <p className="text-xs text-brand-ink-muted leading-relaxed">
+                  Football teams (boys &amp; girls), netball league, volleyball, athletics sprint squads, table tennis, and basketball.
+                </p>
+              </div>
             </div>
 
             <div className="p-6 bg-white rounded-2xl border border-brand-beige-border shadow-subtle space-y-3">
