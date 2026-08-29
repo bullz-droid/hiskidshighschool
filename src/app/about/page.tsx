@@ -70,13 +70,13 @@ export default function AboutPage() {
                 Our Genesis &amp; Philosophy
               </div>
               <h2 className="font-serif font-bold text-3xl sm:text-4xl text-brand-ink leading-tight">
-                Born out of a need for education that works in practice
+                Born out of a need for education that works in practice, anchored in faith
               </h2>
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                His Kids High School was established on open farmland along the Kayunga–Bbaale road with a clear mission: to bridge the historical divide between pure academic theory and practical vocational ability.
+                His Kids High School was established on open farmland along the Kayunga–Bbaale road as a Pentecostal Christian founded institution. Our core mission is to bridge the historical divide between pure academic theory and practical vocational ability, while deeply instilling Pentecostal Christian values.
               </p>
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Under the Ministry of Education and Sports&apos; new Lower Secondary Competency-Based Curriculum, our learners are empowered to discover their innate talents, conduct scientific inquiry in modern laboratories, and graduate with tangible hand skills in tailoring, timber carpentry, or commercial agribusiness.
+                Our vision is to raise God-fearing children equipped to serve their communities. Under the Ministry of Education and Sports&apos; new Lower Secondary Competency-Based Curriculum, our learners discover their talents, conduct scientific inquiry, and graduate with tangible hand skills in tailoring, carpentry, or agribusiness, all firmly built upon a strong moral foundation.
               </p>
             </div>
 
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   </h3>
                 </div>
                 <p className="text-xs sm:text-sm text-brand-ink-muted leading-relaxed">
-                  To be Uganda&apos;s foremost secondary school model combining academic distinction, certified trade craftsmanship, and ethical servant leadership for national transformation.
+                  To be Uganda&apos;s foremost secondary school model combining academic distinction, certified trade craftsmanship, and God-fearing servant leadership for community transformation.
                 </p>
               </div>
 

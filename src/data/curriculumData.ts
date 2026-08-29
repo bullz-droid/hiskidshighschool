@@ -1,4 +1,4 @@
-﻿export interface Subject {
+export interface Subject {
   id: string;
   name: string;
   category: "sciences" | "humanities" | "languages" | "technical" | "vocational";
@@ -89,6 +89,16 @@ export const oLevelSubjects: Subject[] = [
     description: "Food science, culinary arts, bakery, dietary preservation, hospitality management, and catering entrepreneurship.",
     highlight: "Professional culinary lab hosting student-run catering exhibitions.",
     careerPaths: ["Culinary Arts", "Dietetics", "Food Safety Inspection", "Hospitality Management"]
+  },
+  {
+    id: "cre",
+    name: "Christian Religious Education",
+    category: "humanities",
+    level: "O-Level",
+    code: "223",
+    description: "Fostering God-fearing character and spiritual growth based on Pentecostal Christian values, ethics, and biblical teachings.",
+    highlight: "Instilling strong moral foundations, community service, and Christian leadership.",
+    careerPaths: ["Ministry & Theology", "Social Work", "Education", "Community Leadership"]
   },
   {
     id: "eng",

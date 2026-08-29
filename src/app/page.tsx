@@ -52,10 +52,10 @@ export default function HomePage() {
             </div>
 
             <p className="text-base sm:text-lg text-brand-beige-light/85 max-w-lg leading-relaxed mb-3">
-              Mixed day &amp; boarding · O-Level and A-Level · Uganda&apos;s new Competency-Based Curriculum — Arts and Sciences taught with equal weight.
+              A Pentecostal Christian founded mixed day &amp; boarding school. O-Level and A-Level — where Uganda&apos;s new Competency-Based Curriculum meets strong faith and academic excellence.
             </p>
             <p className="text-xs sm:text-sm text-brand-beige-border/70 max-w-md leading-relaxed mb-8">
-              Every learner leaves with more than a certificate — a certified trade in their hands and a team that never left them behind.
+              Raising God-fearing children to serve their community. Every learner leaves with more than a certificate — a certified trade in their hands, deep moral values, and a team that never left them behind.
             </p>
 
             {/* CTA Buttons */}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -53,17 +53,14 @@ export const Navbar: React.FC = () => {
             <span className="sm:hidden font-medium">S.1 & S.5 Intake ongoing</span>
           </div>
           <div className="flex items-center gap-4 text-[11px] opacity-90">
-            <a href="tel:+256700000000" className="flex items-center gap-1 hover:text-brand-gold transition-colors">
+            <a href="tel:+256757870025" className="flex items-center gap-1 hover:text-brand-gold transition-colors">
               <Phone className="w-3 h-3" />
-              <span>+256 700 000 000</span>
+              <span>+256 757 870 025 (Airtel)</span>
             </a>
-            <Link 
-              href="/portal" 
-              className="inline-flex items-center gap-1 text-brand-gold-light hover:underline font-mono"
-            >
-              <ShieldCheck className="w-3 h-3" />
-              <span>Student / Parent Portal</span>
-            </Link>
+            <a href="tel:+256775623621" className="flex items-center gap-1 hover:text-brand-gold transition-colors">
+              <Phone className="w-3 h-3" />
+              <span>+256 775 623 621 (MTN)</span>
+            </a>
           </div>
         </div>
       </aside>
@@ -76,9 +73,9 @@ export const Navbar: React.FC = () => {
             : "bg-brand-green-deep py-4 border-b border-white/10"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between gap-6">
           {/* Brand Identity */}
-          <Link href="/" className="flex items-center gap-3 group">
+          <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="transition-transform group-hover:scale-105 duration-200">
               <Crest className="w-11 h-11 sm:w-12 sm:h-12" />
             </div>
@@ -94,54 +91,51 @@ export const Navbar: React.FC = () => {
             </div>
           </Link>
 
-          {/* Desktop Nav Links */}
-          <nav className="hidden xl:flex items-center gap-6">
-            {navLinks.map((link) => {
-              const isActive = pathname === link.href;
-              return (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors relative py-1 ${
-                    isActive
-                      ? "text-brand-gold-light font-semibold"
-                      : "text-brand-beige-light/85 hover:text-brand-gold"
-                  }`}
-                >
-                  {link.name}
-                  {isActive && (
-                    <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-gold rounded-full" />
-                  )}
-                </Link>
-              );
-            })}
-          </nav>
+          {/* Right side container to group nav and actions */}
+          <div className="flex items-center gap-6 xl:gap-8 justify-end flex-1">
+            {/* Desktop Nav Links */}
+            <nav className="hidden xl:flex items-center gap-6">
+              {navLinks.map((link) => {
+                const isActive = pathname === link.href;
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors relative py-1 ${
+                      isActive
+                        ? "text-brand-gold-light font-semibold"
+                        : "text-brand-beige-light/85 hover:text-brand-gold"
+                    }`}
+                  >
+                    {link.name}
+                    {isActive && (
+                      <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-gold rounded-full" />
+                    )}
+                  </Link>
+                );
+              })}
+            </nav>
 
-          {/* Action Buttons */}
-          <div className="hidden md:flex items-center gap-3">
-            <Link
-              href="/admissions"
-              className="inline-flex items-center gap-2 bg-brand-maroon hover:bg-brand-maroon-light text-brand-beige-light text-xs font-semibold px-4 py-2.5 rounded-full border border-brand-maroon-light/40 shadow-sm transition-all duration-200 hover:shadow-md hover:translate-y-[-1px]"
+            {/* Action Buttons */}
+            <div className="hidden md:flex items-center flex-shrink-0">
+              <Link
+                href="/admissions"
+                className="inline-flex items-center gap-2 bg-brand-maroon hover:bg-brand-maroon-light text-brand-beige-light text-xs font-semibold px-5 py-2.5 rounded-full border border-brand-maroon-light/40 shadow-sm transition-all duration-200 hover:shadow-md hover:translate-y-[-1px]"
+              >
+                <GraduationCap className="w-4 h-4 text-brand-gold" />
+                <span>Apply Online</span>
+              </Link>
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="xl:hidden p-2 rounded-lg text-brand-beige-light hover:bg-brand-green-mid transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold ml-2"
+              aria-label="Toggle menu"
             >
-              <GraduationCap className="w-4 h-4 text-brand-gold" />
-              <span>Apply Online</span>
-            </Link>
-            <Link
-              href="/portal"
-              className="inline-flex items-center gap-1.5 bg-brand-beige/10 hover:bg-brand-beige/20 text-brand-beige-light text-xs font-medium px-3.5 py-2.5 rounded-full border border-brand-beige/20 transition-colors"
-            >
-              <span>Portal</span>
-            </Link>
+              {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            </button>
           </div>
-
-          {/* Mobile Hamburger Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-lg text-brand-beige-light hover:bg-brand-green-mid transition-colors focus:outline-none focus:ring-2 focus:ring-brand-gold"
-            aria-label="Toggle menu"
-          >
-            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
         </div>
       </header>
 
@@ -203,15 +197,10 @@ export const Navbar: React.FC = () => {
                 <GraduationCap className="w-4 h-4 text-brand-gold" />
                 <span>Start Online Application</span>
               </Link>
-              <Link
-                href="/portal"
-                className="w-full flex items-center justify-center gap-2 bg-brand-beige/10 hover:bg-brand-beige/20 text-brand-beige-light py-2.5 rounded-xl font-medium text-xs border border-brand-beige/20"
-              >
-                <ShieldCheck className="w-4 h-4 text-brand-gold" />
-                <span>Student / Parent Portal Demo</span>
-              </Link>
-              <div className="text-center text-[11px] text-brand-beige-light/60 pt-2 font-mono">
-                📞 +256 700 000 000 · Kayunga, Uganda
+              <div className="text-center text-[11px] text-brand-beige-light/60 pt-2 font-mono flex flex-col gap-1">
+                <span>📞 +256 757 870 025 (Airtel)</span>
+                <span>📞 +256 775 623 621 (MTN)</span>
+                <span>Kayunga, Uganda</span>
               </div>
             </div>
           </div>

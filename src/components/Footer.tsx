@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import Link from "next/link";
 import { Crest } from "./Crest";
 import { BarkclothDivider } from "./BarkclothDivider";
@@ -79,11 +79,6 @@ export const Footer: React.FC = () => {
                   <span>14-Acre Agribusiness Farm</span>
                 </Link>
               </li>
-              <li>
-                <Link href="/portal" className="hover:text-brand-gold transition-colors flex items-center gap-1.5 text-brand-gold-light font-mono text-xs">
-                  <span>→ Student / Parent Portal</span>
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -95,7 +90,7 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm text-brand-beige-border">
               <li>
                 <Link href="/about" className="hover:text-brand-gold transition-colors">
-                  Our Founding Story
+                  Our Christian Foundation
                 </Link>
               </li>
               <li>
@@ -138,11 +133,11 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-brand-maroon-light flex-shrink-0" />
-                <span>+256 700 000 000 / +256 772 000 000</span>
+                <span>+256 757 870 025 (Airtel)<br/>+256 775 623 621 (MTN)</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4 text-brand-maroon-light flex-shrink-0" />
-                <span>info@hiskidshighschool.ug</span>
+                <span>hiskidsuganda7@gmail.com</span>
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-brand-maroon-light flex-shrink-0" />

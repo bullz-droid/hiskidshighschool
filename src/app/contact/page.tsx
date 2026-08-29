@@ -64,8 +64,8 @@ export default function ContactPage() {
                   <div>
                     <div className="font-bold text-brand-ink font-mono uppercase">Telephone Lines:</div>
                     <p className="text-brand-ink-muted mt-0.5 font-mono">
-                      General Desk: +256 700 000 000 <br />
-                      Admissions Officer: +256 772 000 000 <br />
+                      General Desk: +256 757 870 025 (Airtel) <br />
+                      Admissions Officer: +256 775 623 621 (MTN) <br />
                       Headteacher: +256 752 000 000
                     </p>
                   </div>
@@ -76,8 +76,8 @@ export default function ContactPage() {
                   <div>
                     <div className="font-bold text-brand-ink font-mono uppercase">Email Addresses:</div>
                     <p className="text-brand-ink-muted mt-0.5 font-mono">
-                      Admissions: admissions@hiskidshighschool.ug <br />
-                      Administration: info@hiskidshighschool.ug
+                      Admissions: hiskidsuganda7@gmail.com <br />
+                      Administration: hiskidsuganda7@gmail.com
                     </p>
                   </div>
                 </div>
@@ -131,7 +131,7 @@ export default function ContactPage() {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g. +256 772 000 000"
+                      placeholder="e.g. +256 775 623 621 (MTN)"
                       className="w-full px-3.5 py-2 text-sm bg-brand-beige-light border border-brand-beige-border rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-maroon font-mono"
                     />
                   </div>
