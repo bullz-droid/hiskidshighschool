@@ -67,16 +67,19 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-5">
               <div className="font-mono text-xs font-bold text-brand-maroon uppercase tracking-wider">
-                Our Genesis &amp; Philosophy
+                Our Genesis &amp; Founders
               </div>
               <h2 className="font-serif font-bold text-3xl sm:text-4xl text-brand-ink leading-tight">
-                Born out of a need for education that works in practice, anchored in faith
+                Anchored in faith, returning to build the community
               </h2>
-              <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                His Kids High School was established on open farmland along the Kayunga–Bbaale road as a Pentecostal Christian founded institution. Our core mission is to bridge the historical divide between pure academic theory and practical vocational ability, while deeply instilling Pentecostal Christian values.
+              <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed font-semibold text-brand-maroon">
+                His Kids High School was founded by Mr. Baludde Kakooza Timothy and his wife Nandugwa Priscilla of the Reconciliation Gospel Commission of churches.
               </p>
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Our vision is to raise God-fearing children equipped to serve their communities. Under the Ministry of Education and Sports&apos; new Lower Secondary Competency-Based Curriculum, our learners discover their talents, conduct scientific inquiry, and graduate with tangible hand skills in tailoring, carpentry, or agribusiness, all firmly built upon a strong moral foundation.
+                Born and raised in this very location in Kayunga, Mr. Baludde was deeply inspired to return home, mobilize resources, and take a firm stand to better the education standards of his local area and Uganda at large. Operating firmly on the principles of our Lord and Savior Jesus Christ, they established the school to raise a generation of God-fearing learners.
+              </p>
+              <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
+                Our core mission is to bridge the historical divide between pure academic theory and practical vocational ability. Under the Ministry of Education and Sports&apos; new Lower Secondary Competency-Based Curriculum, our learners discover their talents, conduct scientific inquiry, and graduate with tangible hand skills in tailoring, carpentry, or agribusiness, all firmly built upon a strong moral foundation.
               </p>
             </div>
 
