@@ -11,8 +11,8 @@ export const FeesCalculator: React.FC = () => {
   const [currency, setCurrency] = useState<"UGX" | "USD">("UGX");
 
   const baseTuition = {
-    "O-Level": { Boarding: 750000, Day: 350000 },
-    "A-Level": { Boarding: 880000, Day: 420000 },
+    "O-Level": { Boarding: 250000, Day: 150000 },
+    "A-Level": { Boarding: 350000, Day: 250000 },
   };
 
   const uniformCost = 140000;

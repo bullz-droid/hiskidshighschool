@@ -66,7 +66,7 @@ export default function ContactPage() {
                     <p className="text-brand-ink-muted mt-0.5 font-mono">
                       General Desk: +256 757 870 025 (Airtel) <br />
                       Admissions Officer: +256 775 623 621 (MTN) <br />
-                      Headteacher: +256 752 000 000
+                      Headteacher: +256 757 870 025
                     </p>
                   </div>
                 </div>

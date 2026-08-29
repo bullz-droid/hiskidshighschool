@@ -141,7 +141,7 @@ export const Navbar: React.FC = () => {
 
       {/* Mobile Sliding Drawer Menu */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-40 xl:hidden bg-black/60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-[60] xl:hidden bg-black/60 backdrop-blur-sm">
           <div className="fixed inset-y-0 right-0 w-full max-w-sm bg-brand-green-deep border-l border-brand-maroon/40 shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
             <div>
               {/* Drawer Header */}

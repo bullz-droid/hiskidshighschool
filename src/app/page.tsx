@@ -65,7 +65,7 @@ export default function HomePage() {
                 className="inline-flex items-center gap-2.5 bg-brand-maroon hover:bg-brand-maroon-light text-brand-beige-light font-semibold text-sm px-7 py-3.5 rounded-full shadow-elevated border border-brand-maroon-light/40 transition-all duration-300 hover:translate-y-[-2px] hover:shadow-2xl"
               >
                 <GraduationCap className="w-5 h-5 text-brand-gold" />
-                Apply for 2026 Intake
+                Apply Now
               </Link>
               <Link
                 href="/academics"
@@ -74,40 +74,23 @@ export default function HomePage() {
                 <BookOpen className="w-4 h-4 text-brand-gold-light" />
                 Explore Curriculum
               </Link>
-              <CampusMapModal />
-            </div>
-
-            {/* Quick stats strip */}
-            <div className="mt-10 flex items-center gap-5 flex-wrap">
-              {[
-                { val: "620+", lbl: "Learners" },
-                { val: "96%", lbl: "UNEB Pass" },
-                { val: "14 ac", lbl: "Campus" },
-                { val: "3", lbl: "Trades" },
-              ].map(({ val, lbl }) => (
-                <div key={lbl} className="text-center">
-                  <div className="font-serif font-bold text-xl text-brand-gold leading-none">{val}</div>
-                  <div className="font-mono text-[10px] text-brand-beige-border uppercase tracking-wider mt-0.5">{lbl}</div>
-                </div>
-              ))}
             </div>
           </div>
 
-          {/* RIGHT: Full-bleed student photo */}
-          <div className="relative hidden lg:block">
+          {/* RIGHT / MOBILE BG: Full-bleed student photo */}
+          <div className="absolute inset-0 lg:relative lg:inset-auto z-[-1] lg:z-0 lg:block opacity-25 lg:opacity-100">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/smiling-student.jpg"
               alt="A joyful His Kids High School student ready to learn"
               className="absolute inset-0 w-full h-full object-cover object-center"
             />
-            {/* Left gradient fade into green */}
-            <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep via-brand-green-deep/30 to-transparent" />
-            {/* Bottom gradient */}
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/60 via-transparent to-transparent" />
+            {/* Gradients for readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep via-brand-green-deep/80 lg:via-brand-green-deep/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-brand-green-dark/90 lg:from-brand-green-dark/60 via-transparent to-transparent" />
 
-            {/* Floating crest card */}
-            <div className="absolute top-10 right-8 p-5 rounded-2xl bg-brand-green-dark/90 border border-brand-gold/30 backdrop-blur-sm shadow-2xl text-center">
+            {/* Floating crest card (Desktop only) */}
+            <div className="hidden lg:block absolute top-10 right-8 p-5 rounded-2xl bg-brand-green-dark/90 border border-brand-gold/30 backdrop-blur-sm shadow-2xl text-center">
               <div className="w-16 h-16 mx-auto mb-2">
                 <Crest className="w-full h-full" />
               </div>
@@ -120,8 +103,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Floating classroom card */}
-            <div className="absolute bottom-16 right-8 w-52 rounded-2xl overflow-hidden shadow-2xl border border-brand-maroon/30 photo-card transition-all duration-300">
+            {/* Floating classroom card (Desktop only) */}
+            <div className="hidden lg:block absolute bottom-16 right-8 w-52 rounded-2xl overflow-hidden shadow-2xl border border-brand-maroon/30 photo-card transition-all duration-300">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/images/classroom-hands.jpg"
@@ -168,7 +151,7 @@ export default function HomePage() {
 
       <BarkclothDivider theme="on-cream" height={34} />
 
-      {/* ABOUT & METRICS */}
+      {/* ABOUT & FOUNDATION */}
       <section className="py-16 sm:py-24 bg-brand-beige-light" id="about">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-3">
@@ -178,39 +161,25 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
               <h2 className="font-serif font-bold text-3xl sm:text-4xl text-brand-ink leading-tight">
-                Educating the whole child, from Kayunga to the world
+                Anchored in faith, returning to build the community
               </h2>
 
               <p className="font-serif text-lg sm:text-xl text-brand-ink leading-relaxed text-brand-maroon/90 font-medium">
-                We built His Kids High School around one conviction — that a truly good education should leave a learner able to think deeply, to make with their hands, and to belong to a team.
+                Founded by Mr. Baludde Kakooza Timothy and his wife Nandugwa Priscilla of the Reconciliation Gospel Commission of churches.
               </p>
 
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Set on 14 acres of open land in Kayunga District, we run a full mixed day and boarding secondary programme for boys and girls. We teach Ordinary and Advanced Level under Uganda&apos;s new competency-based curriculum exactly as set out by the Ministry of Education and Sports — Arts and Sciences given equal weight, modern facilities, and dedicated mentorship.
+                Born and raised in this very location, Mr. Baludde was deeply inspired to return home, mobilize resources, and take a firm stand to better the education standards of his local area and Uganda at large. 
               </p>
 
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Alongside regular academic lessons, every learner masters a certified tertiary hand trade — tailoring, timber carpentry, or modern agribusiness — and competes in school sport weekly.
+                Operating firmly on the principles of our Lord and Savior Jesus Christ, His Kids High School was established to raise a generation of God-fearing learners. We educate the whole child — ensuring they can think deeply, make with their hands, and serve their communities with integrity.
               </p>
 
-              {/* Student writing image */}
-              <div className="relative rounded-2xl overflow-hidden h-48 shadow-card border border-brand-beige-border mt-2">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/images/student-writing.jpg"
-                  alt="A dedicated student studying and writing notes"
-                  className="absolute inset-0 w-full h-full object-cover object-top"
-                />
-                <div className="absolute inset-0 bg-gradient-to-r from-brand-green-deep/60 via-transparent to-transparent" />
-                <div className="absolute bottom-3 left-4">
-                  <span className="font-mono text-[10px] text-brand-beige-light uppercase tracking-wider bg-brand-green-deep/80 px-2 py-1 rounded-full">Focused. Determined. Excellent.</span>
-                </div>
-              </div>
-
-              <div className="pt-2">
+              <div className="pt-4">
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 text-sm font-bold text-brand-maroon hover:text-brand-maroon-dark group"
@@ -221,35 +190,14 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-              <StatCounter
-                target={620}
-                suffix="+"
-                label="Enrolled Learners"
-                subtext="Boys & girls in mixed day & boarding streams"
-                accentColor="maroon"
+            <div className="lg:col-span-5 relative h-64 sm:h-80 lg:h-[450px] rounded-2xl overflow-hidden shadow-card border border-brand-beige-border group">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/student-writing.jpg"
+                alt="A dedicated student studying and writing notes"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
-              <StatCounter
-                target={96}
-                suffix="%"
-                label="UNEB Pass Rate"
-                subtext="UCE & UACE first and second division distinctions"
-                accentColor="green"
-              />
-              <StatCounter
-                target={14}
-                suffix=" Acres"
-                label="School & Farm"
-                subtext="Spacious campus with sports fields & demonstration farm"
-                accentColor="brown"
-              />
-              <StatCounter
-                target={3}
-                suffix=" Trades"
-                label="Certified Crafts"
-                subtext="Tailoring, timber carpentry, commercial agribusiness"
-                accentColor="gold"
-              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-ink/70 via-transparent to-transparent opacity-60" />
             </div>
           </div>
         </div>
