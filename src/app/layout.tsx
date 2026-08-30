@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "Boarding School Uganda"
   ],
   authors: [{ name: "His Kids High School" }],
+  verification: {
+    google: "I1SmWyu61DfLTPn_xklae-QtwDYLOcA4gQfgNXzYkWo",
+  },
 };
 
 export default function RootLayout({
