@@ -24,29 +24,29 @@ export const CurriculumTabs: React.FC = () => {
   return (
     <div className="w-full">
       {/* Level Selector Tabs */}
-      <div className="flex justify-center mb-8">
-        <div className="inline-flex p-1.5 bg-brand-beige border border-brand-beige-border rounded-full shadow-inner">
+      <div className="flex justify-center mb-6 sm:mb-8 px-2">
+        <div className="flex flex-col sm:flex-row w-full sm:w-auto p-1 sm:p-1.5 bg-brand-beige border border-brand-beige-border rounded-xl sm:rounded-full shadow-inner gap-1 sm:gap-0">
           <button
             onClick={() => setActiveTab("o-level")}
-            className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-mono text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
+            className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-full font-mono text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === "o-level"
                 ? "bg-brand-maroon text-brand-beige-light shadow-md"
                 : "text-brand-ink-muted hover:text-brand-maroon"
             }`}
           >
-            <BookOpen className="w-4 h-4" />
-            <span>O-Level CBC (S.1 – S.4)</span>
+            <BookOpen className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span className="truncate">O-Level CBC (S.1 – S.4)</span>
           </button>
           <button
             onClick={() => setActiveTab("a-level")}
-            className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-mono text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
+            className={`flex items-center justify-center gap-1.5 sm:gap-2 px-3 sm:px-6 py-2 sm:py-2.5 rounded-lg sm:rounded-full font-mono text-[10px] sm:text-xs md:text-sm font-bold uppercase tracking-wider transition-all duration-200 ${
               activeTab === "a-level"
                 ? "bg-brand-green-deep text-brand-gold-light shadow-md"
                 : "text-brand-ink-muted hover:text-brand-green-mid"
             }`}
           >
-            <Award className="w-4 h-4" />
-            <span>A-Level Combinations (S.5 – S.6)</span>
+            <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+            <span className="truncate">A-Level (S.5 – S.6)</span>
           </button>
         </div>
       </div>
