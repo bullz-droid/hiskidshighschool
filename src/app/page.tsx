@@ -52,10 +52,10 @@ export default function HomePage() {
             </div>
 
             <p className="text-base sm:text-lg text-brand-beige-light/85 max-w-lg leading-relaxed mb-3">
-              A Pentecostal Christian founded mixed day &amp; boarding school. O-Level and A-Level — where Uganda&apos;s new Competency-Based Curriculum meets strong faith and academic excellence.
+              We are founded on Christian values with the purpose of raising a generation that will view the spheres of life in a biblical perspective. To make available a wholistic quality education to all rural children who are born in these districts where witchcraft, violence and poverty strongholds have been generational.
             </p>
             <p className="text-xs sm:text-sm text-brand-beige-border/70 max-w-md leading-relaxed mb-8">
-              Raising God-fearing children to serve their community. Every learner leaves with more than a certificate — a certified trade in their hands, deep moral values, and a team that never left them behind.
+              The school does not discriminate other religions and all children have a right to this establishment. We are a mixed day and boarding high school for both O-level and A-level and Uganda&apos;s new competency-based curriculum meets our faith values and academic excellence.
             </p>
 
             {/* CTA Buttons */}
