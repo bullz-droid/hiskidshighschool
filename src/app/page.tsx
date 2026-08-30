@@ -164,11 +164,11 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-5">
               <h2 className="font-serif font-bold text-3xl sm:text-4xl text-brand-ink leading-tight">
-                Anchored in faith, returning to build the community
+                Anchored in faith, returning to build the communities
               </h2>
 
               <p className="font-serif text-lg sm:text-xl text-brand-ink leading-relaxed text-brand-maroon/90 font-medium">
-                Founded by Mr. Baludde Kakooza Timothy and his wife Nandugwa Priscilla of the Reconciliation Gospel Commission of churches.
+                Founded by Mr. Baludde Kakooza Timothy and his wife Nandugwa Priscilla of the Reconciliation Gospel Commission.
               </p>
 
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
@@ -176,7 +176,7 @@ export default function HomePage() {
               </p>
 
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Operating firmly on the principles of our Lord and Savior Jesus Christ, His Kids High School was established to raise a generation of God-fearing learners. We educate the whole child — ensuring they can think deeply, make with their hands, and serve their communities with integrity.
+                Operating firmly on the principles of our Lord and Savior Jesus Christ, His Kids High School was established to raise a generation of God-fearing learners. We educate the whole child — ensuring they can think deeply, make with their hands, and do social, economic, political and spiritual transformation in their communities and the country.
               </p>
 
               <div className="pt-4">
