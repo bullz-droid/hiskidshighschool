@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Replace with the actual domain where the site will be hosted
-  const baseUrl = 'https://hiskidshighschool.ug';
+  const baseUrl = 'https://www.hiskidshighschool.com';
 
   // Core static routes of the application
   const routes = [
