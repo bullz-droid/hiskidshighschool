@@ -11,6 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/academics',
     '/vocational-skills',
     '/student-life',
+    '/gallery',
     '/admissions',
     '/contact'
   ];
