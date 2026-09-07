@@ -73,10 +73,10 @@ export default function AboutPage() {
                 Anchored in faith, returning to build the communities
               </h2>
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed font-semibold text-brand-maroon">
-                His Kids High School was founded by Mr. Baludde Kakooza Timothy and his wife Nandugwa Priscilla of the Reconciliation Gospel Commission.
+                In 2004, Pastor Timothy Kakooza and Priscilla founded His Kids Uganda as a Charity organization that ran an orphanage home and a Girl Child Empowerment Network. They also founded Calvary Mission Church, a local ministry, and Reconciliation Gospel Commission, an outreach ministry you can view on the TimothyRgc page.
               </p>
               <p className="text-sm sm:text-base text-brand-ink-muted leading-relaxed">
-                Born and raised in this very location, Mr. Baludde was deeply inspired to return home, mobilize resources, and take a firm stand to better the education standards of his local area and Uganda at large. Operating firmly on the principles of our Lord and Savior Jesus Christ, they established the school to raise a generation of God-fearing learners. We educate the whole child — ensuring they can think deeply, make with their hands, and do social, economic, political and spiritual transformation in their communities and the country.
+                Transitioned into a new level of constructing HIS KIDS HIGH SCHOOL (hiskidshighschool.com). We are founded on Christian values with the purpose of raising a generation that will view the spheres of life in a biblical perspective. To make available a wholistic quality education to all rural children who are born in these districts where witchcraft, violence and poverty strongholds have been generational.
               </p>
             </div>
 
