@@ -2,6 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import { v2 as cloudinary } from "cloudinary";
 
+import Link from "next/link";
+
 export const metadata: Metadata = {
   title: "Photo Gallery | His Kids High School",
   description: "View photos of our campus, student life, vocational workshops, and championship athletics.",
@@ -24,11 +26,11 @@ export default async function GalleryPage() {
     error = "Awaiting Cloudinary API Key to connect to the gallery.";
   } else {
     try {
-      // Fetch images from the 'hiskids-gallery' folder
+      // Fetch all images from Cloudinary sorted by newest first
       const results = await cloudinary.search
-        .expression("folder:hiskids-gallery")
+        .expression("resource_type:image")
         .sort_by("created_at", "desc")
-        .max_results(30)
+        .max_results(50)
         .execute();
       
       images = results.resources;
@@ -50,9 +52,16 @@ export default async function GalleryPage() {
           <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-beige-light mb-6">
             School Photo Gallery
           </h1>
-          <p className="text-sm sm:text-base text-brand-beige-border max-w-2xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-brand-beige-border max-w-2xl mx-auto leading-relaxed mb-8">
             Take a visual tour of His Kids High School. From our active classrooms and vocational workshops to championship sports and boarding life.
           </p>
+
+          <Link
+            href="/admin/upload"
+            className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-light text-brand-green-dark font-bold text-xs px-5 py-2.5 rounded-full shadow transition-all hover:scale-105"
+          >
+            <span>+ Admin: Upload New Photos</span>
+          </Link>
         </div>
       </section>
 

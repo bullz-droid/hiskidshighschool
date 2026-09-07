@@ -33,8 +33,8 @@ export const Navbar: React.FC = () => {
     { name: "Academics", href: "/academics" },
     { name: "Vocational Skills", href: "/vocational-skills" },
     { name: "Student Life", href: "/student-life" },
+    { name: "Gallery", href: "/gallery" },
     { name: "Admissions & Fees", href: "/admissions" },
-    { name: "News & Events", href: "/news-events" },
     { name: "Contact", href: "/contact" },
   ];
 
