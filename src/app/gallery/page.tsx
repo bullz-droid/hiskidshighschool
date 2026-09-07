@@ -26,9 +26,9 @@ export default async function GalleryPage() {
     error = "Awaiting Cloudinary API Key to connect to the gallery.";
   } else {
     try {
-      // Fetch all images from Cloudinary excluding default sample images, sorted by newest first
+      // Fetch images from the 'hiskids-gallery' folder (excludes default samples)
       const results = await cloudinary.search
-        .expression("resource_type:image AND NOT folder:samples* AND NOT public_id:cld-sample* AND NOT public_id:sample*")
+        .expression("folder=hiskids-gallery")
         .sort_by("created_at", "desc")
         .max_results(50)
         .execute();
