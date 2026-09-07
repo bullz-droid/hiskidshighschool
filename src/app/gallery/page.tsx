@@ -26,9 +26,9 @@ export default async function GalleryPage() {
     error = "Awaiting Cloudinary API Key to connect to the gallery.";
   } else {
     try {
-      // Fetch all images from Cloudinary sorted by newest first
+      // Fetch all images from Cloudinary excluding default sample images, sorted by newest first
       const results = await cloudinary.search
-        .expression("resource_type:image")
+        .expression("resource_type:image AND NOT folder:samples* AND NOT public_id:cld-sample* AND NOT public_id:sample*")
         .sort_by("created_at", "desc")
         .max_results(50)
         .execute();
@@ -52,16 +52,9 @@ export default async function GalleryPage() {
           <h1 className="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-beige-light mb-6">
             School Photo Gallery
           </h1>
-          <p className="text-sm sm:text-base text-brand-beige-border max-w-2xl mx-auto leading-relaxed mb-8">
+          <p className="text-sm sm:text-base text-brand-beige-border max-w-2xl mx-auto leading-relaxed">
             Take a visual tour of His Kids High School. From our active classrooms and vocational workshops to championship sports and boarding life.
           </p>
-
-          <Link
-            href="/admin/upload"
-            className="inline-flex items-center gap-2 bg-brand-gold hover:bg-brand-gold-light text-brand-green-dark font-bold text-xs px-5 py-2.5 rounded-full shadow transition-all hover:scale-105"
-          >
-            <span>+ Admin: Upload New Photos</span>
-          </Link>
         </div>
       </section>
 
